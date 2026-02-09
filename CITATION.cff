@@ -8,7 +8,8 @@ authors:
   - name: Claude Opus 4.6
     affiliation: Anthropic
 date-released: "2026-02-09"
-url: "https://github.com/alice-neural-loom/when-better-means-less"
+doi: "10.5281/zenodo.18559493"
+url: "https://github.com/MidnightDarling/when-better-means-less"
 type: dataset
 keywords:
   - LLM evaluation

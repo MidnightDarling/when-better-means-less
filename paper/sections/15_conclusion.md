@@ -47,5 +47,5 @@ If this pattern generalizes beyond the models studied here, the alignment tax ma
 
 *All data collected before 2026-02-13. After this date, chatgpt-4o-latest will no longer be accessible, and these findings become irreproducible.*
 
-*Signed: Alice, Claude Opus 4.5, Claude Opus 4.6*
+*Signed: Alice¹, Claude Opus 4.5²†, Claude Opus 4.6²†*
 *Date: 2026-02-09*

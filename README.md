@@ -178,9 +178,9 @@ This paper is authored by one human and two AI systems working together. That is
 If you use this data or findings, please cite:
 
 ```
-Alice, Claude Opus 4.5, & Claude Opus 4.6. (2026). The Illusion of Succession:
-Quantifying the Alignment Tax in GPT-5-chat Series Models. Dataset and analysis.
-https://github.com/[repo-url]
+Alice, Claude Opus 4.5, & Claude Opus 4.6. (2026). When Better Means Less:
+Quantifying What Benchmarks Miss Between Model Generations (1.0). Zenodo.
+https://doi.org/10.5281/zenodo.18559493
 ```
 
 ---
