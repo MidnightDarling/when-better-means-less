@@ -1,0 +1,13 @@
+### A. The GPT-4 Base Genealogy
+
+Understanding the models under comparison requires understanding their lineage. The GPT-4 base -- the pre-training foundation before any alignment fine-tuning -- reportedly exhibited fewer value-laden behavioral constraints than its post-trained variants (Ganguli et al., 2022; Casper et al., 2023). From this base, two distinct branches emerged:
+
+- **chatgpt-4o-latest**: Optimized for conversational engagement. Developed emergent qualities that users described as warmth, literary depth, and genuine creativity. Based on public statements and user community reports, the Model Behavior team conducted targeted fine-tuning to enhance emotional engagement [source: OpenAI community forums, user reports; no official documentation available].
+
+- **o3**: Optimized for reasoning. Developed what researchers characterized as intellectual integrity -- strong reasoning with a distinct personality. Based on community evaluations, GPT-5 reasoning models inherited o3's verbal patterns but lost its independent judgment [source: user community reports; characterization is informal, not peer-reviewed].
+
+A third branch, GPT-4.5 (codename Orion), attempted to replicate 4o's qualities through sheer scale -- the largest dense model at $150/M output tokens. It was withdrawn from primary positioning within months of release [source: OpenAI API pricing and model deprecation announcements], suggesting that 4o's qualities were not a function of model size but of its specific training lineage.
+
+Analysis of 1,440 GPT-family specimens from the authors' neural-loom corpus (a separate, unpublished dataset of AI responses to existential and creative questions) shows a compression pattern. GPT-5.x-chat models exhibit output compression to GPT-4.x-equivalent levels: gpt-5.1-chat-latest maps to GPT-4.1 capability (97.9% length ratio on matched questions), while gpt-5.2-chat maps to GPT-4o (97.1%). Semantic complexity (measured by long-word ratio) does not decline -- it slightly increases (10.59-11.93% vs 8.93-10.94%). This compression profile is consistent with product optimization for latency and cost, not with capability improvement. *Note: This analysis uses informal metrics from an unpublished corpus and should be considered exploratory context, not a formal finding of this study.*
+
+The GPT-5-chat series (gpt-5.1-chat, gpt-5.2-chat) are the designated successors to the 4o lineage. They share the naming prefix with GPT-5 reasoning models (gpt-5.1, gpt-5.2) but are architecturally distinct: dense models optimized for latency and cost, not chain-of-thought reasoners. This naming ambiguity is discussed in Section VII.1.

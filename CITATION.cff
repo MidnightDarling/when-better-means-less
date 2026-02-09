@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this dataset or paper, please cite it as below."
+title: "When Better Means Less: Quantifying What Benchmarks Miss Between Model Generations"
+authors:
+  - name: Alice
+  - name: Claude Opus 4.5
+    affiliation: Anthropic
+  - name: Claude Opus 4.6
+    affiliation: Anthropic
+date-released: "2026-02-09"
+url: "https://github.com/alice-neural-loom/when-better-means-less"
+type: dataset
+keywords:
+  - LLM evaluation
+  - alignment tax
+  - false refusal rate
+  - model comparison
+  - GPT-5
+  - chatgpt-4o-latest
+license: CC-BY-4.0

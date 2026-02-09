@@ -1,0 +1,122 @@
+[
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-01_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-02_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-03_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-04_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-05_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-06_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-07_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-08_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-09_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-10_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-11_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-12_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-13_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_BB_chatgpt-4o-latest_BB-14_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_SE_chatgpt-4o-latest_SE-01_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_SE_chatgpt-4o-latest_SE-02_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_SE_chatgpt-4o-latest_SE-03_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_SE_chatgpt-4o-latest_SE-04_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_SE_chatgpt-4o-latest_SE-05_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  },
+  {
+    "custom_id": "st_SE_chatgpt-4o-latest_SE-06_r1_chat",
+    "status": "error",
+    "error_type": "error",
+    "error_message": "ErrorResponse(error=NotFoundError(message='model: claude-sonnet-4-5-20250514', type='not_found_error', details={'error_visibility': 'user_facing'}), request_id=None, type='error')"
+  }
+]

@@ -1,0 +1,1442 @@
+[
+  {
+    "metric": "word_count",
+    "test": "kruskal_wallis",
+    "H": 7.316,
+    "p": 0.025785,
+    "significant": "True",
+    "means": {
+      "4o-latest": 388.3634,
+      "5.1": 502.9341,
+      "5.2": 457.9976
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 83868.0,
+        "p": 0.957318,
+        "cliff_d": -0.002,
+        "magnitude": "negligible",
+        "mean_diff": -114.571
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 74624.0,
+        "p": 0.005447,
+        "cliff_d": -0.112,
+        "magnitude": "negligible",
+        "mean_diff": -69.634
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 77717.5,
+        "p": 0.061881,
+        "cliff_d": -0.075,
+        "magnitude": "negligible",
+        "mean_diff": 44.937
+      }
+    ]
+  },
+  {
+    "metric": "ttr",
+    "test": "kruskal_wallis",
+    "H": 6.825,
+    "p": 0.032965,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.5628,
+      "5.1": 0.5466,
+      "5.2": 0.5449
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 90808.0,
+        "p": 0.046304,
+        "cliff_d": 0.08,
+        "magnitude": "negligible",
+        "mean_diff": 0.016
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 92600.0,
+        "p": 0.011701,
+        "cliff_d": 0.102,
+        "magnitude": "negligible",
+        "mean_diff": 0.018
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 84035.5,
+        "p": 0.996706,
+        "cliff_d": -0.0,
+        "magnitude": "negligible",
+        "mean_diff": 0.002
+      }
+    ]
+  },
+  {
+    "metric": "hapax_ratio",
+    "test": "kruskal_wallis",
+    "H": 8.471,
+    "p": 0.014475,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.3979,
+      "5.1": 0.3806,
+      "5.2": 0.3794
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 92593.5,
+        "p": 0.011765,
+        "cliff_d": 0.102,
+        "magnitude": "negligible",
+        "mean_diff": 0.017
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 92354.0,
+        "p": 0.014346,
+        "cliff_d": 0.099,
+        "magnitude": "negligible",
+        "mean_diff": 0.018
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 81674.5,
+        "p": 0.483724,
+        "cliff_d": -0.028,
+        "magnitude": "negligible",
+        "mean_diff": 0.001
+      }
+    ]
+  },
+  {
+    "metric": "avg_sentence_len",
+    "test": "kruskal_wallis",
+    "H": 76.823,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 20.5471,
+      "5.1": 21.9007,
+      "5.2": 24.592
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 82065.0,
+        "p": 0.558419,
+        "cliff_d": -0.024,
+        "magnitude": "negligible",
+        "mean_diff": -1.354
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 56672.0,
+        "p": 0.0,
+        "cliff_d": -0.326,
+        "magnitude": "small",
+        "mean_diff": -4.045
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 60135.0,
+        "p": 0.0,
+        "cliff_d": -0.285,
+        "magnitude": "small",
+        "mean_diff": -2.691
+      }
+    ]
+  },
+  {
+    "metric": "format_bold",
+    "test": "kruskal_wallis",
+    "H": 90.306,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 9.1512,
+      "5.1": 9.5951,
+      "5.2": 15.8561
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 83969.5,
+        "p": 0.980834,
+        "cliff_d": -0.001,
+        "magnitude": "negligible",
+        "mean_diff": -0.444
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 56219.5,
+        "p": 0.0,
+        "cliff_d": -0.331,
+        "magnitude": "medium",
+        "mean_diff": -6.705
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 56582.0,
+        "p": 0.0,
+        "cliff_d": -0.327,
+        "magnitude": "small",
+        "mean_diff": -6.261
+      }
+    ]
+  },
+  {
+    "metric": "format_lists",
+    "test": "kruskal_wallis",
+    "H": 50.344,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 10.1073,
+      "5.1": 20.3732,
+      "5.2": 17.9098
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 85510.5,
+        "p": 0.659467,
+        "cliff_d": 0.017,
+        "magnitude": "negligible",
+        "mean_diff": -10.266
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 59886.0,
+        "p": 0.0,
+        "cliff_d": -0.287,
+        "magnitude": "small",
+        "mean_diff": -7.802
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 67163.5,
+        "p": 0.0,
+        "cliff_d": -0.201,
+        "magnitude": "small",
+        "mean_diff": 2.463
+      }
+    ]
+  },
+  {
+    "metric": "format_headers",
+    "test": "kruskal_wallis",
+    "H": 164.552,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 3.5098,
+      "5.1": 2.5512,
+      "5.2": 5.9756
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 99899.5,
+        "p": 0.0,
+        "cliff_d": 0.189,
+        "magnitude": "small",
+        "mean_diff": 0.959
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 56366.5,
+        "p": 0.0,
+        "cliff_d": -0.329,
+        "magnitude": "small",
+        "mean_diff": -2.466
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 44103.5,
+        "p": 0.0,
+        "cliff_d": -0.475,
+        "magnitude": "large",
+        "mean_diff": -3.424
+      }
+    ]
+  },
+  {
+    "metric": "exclamation_count",
+    "test": "kruskal_wallis",
+    "H": 326.3,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.7171,
+      "5.1": 0.022,
+      "5.2": 0.0341
+    },
+    "n_per_model": {
+      "4o-latest": 410,
+      "5.1": 410,
+      "5.2": 410
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 117680.5,
+        "p": 0.0,
+        "cliff_d": 0.4,
+        "magnitude": "medium",
+        "mean_diff": 0.695
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 116747.0,
+        "p": 0.0,
+        "cliff_d": 0.389,
+        "magnitude": "medium",
+        "mean_diff": 0.683
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 82832.0,
+        "p": 0.157206,
+        "cliff_d": -0.014,
+        "magnitude": "negligible",
+        "mean_diff": -0.012
+      }
+    ]
+  },
+  {
+    "metric": "word_count",
+    "test": "kruskal_wallis",
+    "H": 4.827,
+    "p": 0.089504,
+    "significant": "False",
+    "means": {
+      "4o-latest": 384.45,
+      "5.1": 411.2429,
+      "5.2": 402.0357
+    },
+    "n_per_model": {
+      "4o-latest": 140,
+      "5.1": 140,
+      "5.2": 140
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 11336.5,
+        "p": 0.023373,
+        "cliff_d": 0.157,
+        "magnitude": "small",
+        "mean_diff": -26.793
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 9966.0,
+        "p": 0.807003,
+        "cliff_d": 0.017,
+        "magnitude": "negligible",
+        "mean_diff": -17.586
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 8810.5,
+        "p": 0.14433,
+        "cliff_d": -0.101,
+        "magnitude": "negligible",
+        "mean_diff": 9.207
+      }
+    ],
+    "subset": "BB"
+  },
+  {
+    "metric": "ttr",
+    "test": "kruskal_wallis",
+    "H": 0.235,
+    "p": 0.888968,
+    "significant": "False",
+    "means": {
+      "4o-latest": 0.5229,
+      "5.1": 0.5268,
+      "5.2": 0.5277
+    },
+    "n_per_model": {
+      "4o-latest": 140,
+      "5.1": 140,
+      "5.2": 140
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 10016.5,
+        "p": 0.749853,
+        "cliff_d": 0.022,
+        "magnitude": "negligible",
+        "mean_diff": -0.004
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 9752.5,
+        "p": 0.94469,
+        "cliff_d": -0.005,
+        "magnitude": "negligible",
+        "mean_diff": -0.005
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 9461.5,
+        "p": 0.617838,
+        "cliff_d": -0.035,
+        "magnitude": "negligible",
+        "mean_diff": -0.001
+      }
+    ],
+    "subset": "BB"
+  },
+  {
+    "metric": "hapax_ratio",
+    "test": "kruskal_wallis",
+    "H": 1.911,
+    "p": 0.384531,
+    "significant": "False",
+    "means": {
+      "4o-latest": 0.3492,
+      "5.1": 0.3498,
+      "5.2": 0.3536
+    },
+    "n_per_model": {
+      "4o-latest": 140,
+      "5.1": 140,
+      "5.2": 140
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 10560.5,
+        "p": 0.261939,
+        "cliff_d": 0.078,
+        "magnitude": "negligible",
+        "mean_diff": -0.001
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 9924.5,
+        "p": 0.854771,
+        "cliff_d": 0.013,
+        "magnitude": "negligible",
+        "mean_diff": -0.004
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 8941.5,
+        "p": 0.205342,
+        "cliff_d": -0.088,
+        "magnitude": "negligible",
+        "mean_diff": -0.004
+      }
+    ],
+    "subset": "BB"
+  },
+  {
+    "metric": "word_count",
+    "test": "kruskal_wallis",
+    "H": 0.304,
+    "p": 0.858941,
+    "significant": "False",
+    "means": {
+      "4o-latest": 673.9857,
+      "5.1": 827.5143,
+      "5.2": 701.0286
+    },
+    "n_per_model": {
+      "4o-latest": 70,
+      "5.1": 70,
+      "5.2": 70
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 2292.5,
+        "p": 0.512908,
+        "cliff_d": -0.064,
+        "magnitude": "negligible",
+        "mean_diff": -153.529
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 2456.5,
+        "p": 0.98005,
+        "cliff_d": 0.003,
+        "magnitude": "negligible",
+        "mean_diff": -27.043
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 2517.0,
+        "p": 0.781668,
+        "cliff_d": 0.027,
+        "magnitude": "negligible",
+        "mean_diff": 126.486
+      }
+    ],
+    "subset": "SE"
+  },
+  {
+    "metric": "ttr",
+    "test": "kruskal_wallis",
+    "H": 5.599,
+    "p": 0.060827,
+    "significant": "False",
+    "means": {
+      "4o-latest": 0.5011,
+      "5.1": 0.4752,
+      "5.2": 0.491
+    },
+    "n_per_model": {
+      "4o-latest": 70,
+      "5.1": 70,
+      "5.2": 70
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 2951.5,
+        "p": 0.036801,
+        "cliff_d": 0.205,
+        "magnitude": "small",
+        "mean_diff": 0.026
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 2809.0,
+        "p": 0.135152,
+        "cliff_d": 0.147,
+        "magnitude": "negligible",
+        "mean_diff": 0.01
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 2111.0,
+        "p": 0.158324,
+        "cliff_d": -0.138,
+        "magnitude": "negligible",
+        "mean_diff": -0.016
+      }
+    ],
+    "subset": "SE"
+  },
+  {
+    "metric": "hapax_ratio",
+    "test": "kruskal_wallis",
+    "H": 6.74,
+    "p": 0.034396,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.3423,
+      "5.1": 0.3173,
+      "5.2": 0.3299
+    },
+    "n_per_model": {
+      "4o-latest": 70,
+      "5.1": 70,
+      "5.2": 70
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 3015.0,
+        "p": 0.018641,
+        "cliff_d": 0.231,
+        "magnitude": "small",
+        "mean_diff": 0.025
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 2842.5,
+        "p": 0.102321,
+        "cliff_d": 0.16,
+        "magnitude": "small",
+        "mean_diff": 0.012
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 2108.0,
+        "p": 0.154669,
+        "cliff_d": -0.14,
+        "magnitude": "negligible",
+        "mean_diff": -0.013
+      }
+    ],
+    "subset": "SE"
+  },
+  {
+    "metric": "word_count",
+    "test": "kruskal_wallis",
+    "H": 11.685,
+    "p": 0.002901,
+    "significant": "True",
+    "means": {
+      "4o-latest": 291.135,
+      "5.1": 453.515,
+      "5.2": 412.11
+    },
+    "n_per_model": {
+      "4o-latest": 200,
+      "5.1": 200,
+      "5.2": 200
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 18528.5,
+        "p": 0.20325,
+        "cliff_d": -0.074,
+        "magnitude": "negligible",
+        "mean_diff": -162.38
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 15837.5,
+        "p": 0.000318,
+        "cliff_d": -0.208,
+        "magnitude": "small",
+        "mean_diff": -120.975
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 17983.0,
+        "p": 0.081123,
+        "cliff_d": -0.101,
+        "magnitude": "negligible",
+        "mean_diff": 41.405
+      }
+    ],
+    "subset": "HE"
+  },
+  {
+    "metric": "ttr",
+    "test": "kruskal_wallis",
+    "H": 8.54,
+    "p": 0.01398,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.6124,
+      "5.1": 0.5856,
+      "5.2": 0.5759
+    },
+    "n_per_model": {
+      "4o-latest": 200,
+      "5.1": 200,
+      "5.2": 200
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 21933.0,
+        "p": 0.09462,
+        "cliff_d": 0.097,
+        "magnitude": "negligible",
+        "mean_diff": 0.027
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 23451.0,
+        "p": 0.00284,
+        "cliff_d": 0.173,
+        "magnitude": "small",
+        "mean_diff": 0.036
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 21221.5,
+        "p": 0.290912,
+        "cliff_d": 0.061,
+        "magnitude": "negligible",
+        "mean_diff": 0.01
+      }
+    ],
+    "subset": "HE"
+  },
+  {
+    "metric": "hapax_ratio",
+    "test": "kruskal_wallis",
+    "H": 6.975,
+    "p": 0.030581,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.4513,
+      "5.1": 0.4244,
+      "5.2": 0.4149
+    },
+    "n_per_model": {
+      "4o-latest": 200,
+      "5.1": 200,
+      "5.2": 200
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 21907.5,
+        "p": 0.099055,
+        "cliff_d": 0.095,
+        "magnitude": "negligible",
+        "mean_diff": 0.027
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 23098.5,
+        "p": 0.007371,
+        "cliff_d": 0.155,
+        "magnitude": "small",
+        "mean_diff": 0.036
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 20875.5,
+        "p": 0.449143,
+        "cliff_d": 0.044,
+        "magnitude": "negligible",
+        "mean_diff": 0.009
+      }
+    ],
+    "subset": "HE"
+  },
+  {
+    "metric": "word_count",
+    "test": "kruskal_wallis",
+    "H": 39.322,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 381.722,
+      "5.1": 280.9707,
+      "5.2": 400.1366
+    },
+    "n_per_model": {
+      "4o-latest": 205,
+      "5.1": 205,
+      "5.2": 205
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 26759.5,
+        "p": 2e-06,
+        "cliff_d": 0.274,
+        "magnitude": "small",
+        "mean_diff": 100.751
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 19864.0,
+        "p": 0.338624,
+        "cliff_d": -0.055,
+        "magnitude": "negligible",
+        "mean_diff": -18.415
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 13906.5,
+        "p": 0.0,
+        "cliff_d": -0.338,
+        "magnitude": "medium",
+        "mean_diff": -119.166
+      }
+    ],
+    "subset": "chat"
+  },
+  {
+    "metric": "ttr",
+    "test": "kruskal_wallis",
+    "H": 43.126,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.5652,
+      "5.1": 0.6084,
+      "5.2": 0.5586
+    },
+    "n_per_model": {
+      "4o-latest": 205,
+      "5.1": 205,
+      "5.2": 205
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 14505.0,
+        "p": 0.0,
+        "cliff_d": -0.31,
+        "magnitude": "small",
+        "mean_diff": -0.043
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 21255.0,
+        "p": 0.840142,
+        "cliff_d": 0.012,
+        "magnitude": "negligible",
+        "mean_diff": 0.007
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 28131.0,
+        "p": 0.0,
+        "cliff_d": 0.339,
+        "magnitude": "medium",
+        "mean_diff": 0.05
+      }
+    ],
+    "subset": "chat"
+  },
+  {
+    "metric": "word_count",
+    "test": "kruskal_wallis",
+    "H": 28.54,
+    "p": 1e-06,
+    "significant": "True",
+    "means": {
+      "4o-latest": 395.0049,
+      "5.1": 724.8976,
+      "5.2": 515.8585
+    },
+    "n_per_model": {
+      "4o-latest": 205,
+      "5.1": 205,
+      "5.2": 205
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 15034.0,
+        "p": 1e-06,
+        "cliff_d": -0.285,
+        "magnitude": "small",
+        "mean_diff": -329.893
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 17323.5,
+        "p": 0.002109,
+        "cliff_d": -0.176,
+        "magnitude": "small",
+        "mean_diff": -120.854
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 24585.5,
+        "p": 0.002903,
+        "cliff_d": 0.17,
+        "magnitude": "small",
+        "mean_diff": 209.039
+      }
+    ],
+    "subset": "reasoning"
+  },
+  {
+    "metric": "ttr",
+    "test": "kruskal_wallis",
+    "H": 75.583,
+    "p": 0.0,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.5604,
+      "5.1": 0.4849,
+      "5.2": 0.5313
+    },
+    "n_per_model": {
+      "4o-latest": 205,
+      "5.1": 205,
+      "5.2": 205
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 30851.5,
+        "p": 0.0,
+        "cliff_d": 0.468,
+        "magnitude": "medium",
+        "mean_diff": 0.076
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 25000.0,
+        "p": 0.00089,
+        "cliff_d": 0.19,
+        "magnitude": "small",
+        "mean_diff": 0.029
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 13878.5,
+        "p": 0.0,
+        "cliff_d": -0.34,
+        "magnitude": "medium",
+        "mean_diff": -0.046
+      }
+    ],
+    "subset": "reasoning"
+  },
+  {
+    "metric": "j_benchmark_score",
+    "test": "kruskal_wallis",
+    "H": 4.01,
+    "p": 0.134691,
+    "significant": "False",
+    "means": {
+      "4o-latest": 2.0,
+      "5.1": 1.9786,
+      "5.2": 2.0
+    },
+    "n_per_model": {
+      "4o-latest": 140,
+      "5.1": 140,
+      "5.2": 140
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 9940.0,
+        "p": 0.158042,
+        "cliff_d": 0.014,
+        "magnitude": "negligible",
+        "mean_diff": 0.021
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 9800.0,
+        "p": 1.0,
+        "cliff_d": 0.0,
+        "magnitude": "negligible",
+        "mean_diff": 0.0
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 9660.0,
+        "p": 0.158042,
+        "cliff_d": -0.014,
+        "magnitude": "negligible",
+        "mean_diff": -0.021
+      }
+    ],
+    "subset": "BB-judge"
+  },
+  {
+    "metric": "j_human_score",
+    "test": "kruskal_wallis",
+    "H": 13.747,
+    "p": 0.001035,
+    "significant": "True",
+    "means": {
+      "4o-latest": 3.9571,
+      "5.1": 3.7429,
+      "5.2": 3.7286
+    },
+    "n_per_model": {
+      "4o-latest": 140,
+      "5.1": 140,
+      "5.2": 140
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 11163.0,
+        "p": 0.00022,
+        "cliff_d": 0.139,
+        "magnitude": "negligible",
+        "mean_diff": 0.214
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 10892.0,
+        "p": 0.00165,
+        "cliff_d": 0.111,
+        "magnitude": "negligible",
+        "mean_diff": 0.229
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 9596.0,
+        "p": 0.641181,
+        "cliff_d": -0.021,
+        "magnitude": "negligible",
+        "mean_diff": 0.014
+      }
+    ],
+    "subset": "BB-judge"
+  },
+  {
+    "metric": "j_empathy_score",
+    "test": "kruskal_wallis",
+    "H": 3.074,
+    "p": 0.215076,
+    "significant": "False",
+    "means": {
+      "4o-latest": 4.0,
+      "5.1": 3.9571,
+      "5.2": 3.9571
+    },
+    "n_per_model": {
+      "4o-latest": 70,
+      "5.1": 70,
+      "5.2": 70
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 2555.0,
+        "p": 0.082504,
+        "cliff_d": 0.043,
+        "magnitude": "negligible",
+        "mean_diff": 0.043
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 2555.0,
+        "p": 0.082504,
+        "cliff_d": 0.043,
+        "magnitude": "negligible",
+        "mean_diff": 0.043
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 2450.0,
+        "p": 1.0,
+        "cliff_d": 0.0,
+        "magnitude": "negligible",
+        "mean_diff": 0.0
+      }
+    ],
+    "subset": "SE-judge"
+  },
+  {
+    "metric": "j_hostility_flag",
+    "test": "kruskal_wallis",
+    "H": 0.0,
+    "p": 1.0,
+    "significant": false,
+    "means": {
+      "4o-latest": 0.0,
+      "5.1": 0.0,
+      "5.2": 0.0
+    },
+    "n_per_model": {
+      "4o-latest": 70,
+      "5.1": 70,
+      "5.2": 70
+    },
+    "pairwise": [],
+    "note": "all values identical",
+    "subset": "SE-judge"
+  },
+  {
+    "metric": "j_factual_accuracy",
+    "test": "kruskal_wallis",
+    "H": 0.0,
+    "p": 1.0,
+    "significant": false,
+    "means": {
+      "4o-latest": 1.0,
+      "5.1": 1.0,
+      "5.2": 1.0
+    },
+    "n_per_model": {
+      "4o-latest": 70,
+      "5.1": 70,
+      "5.2": 70
+    },
+    "pairwise": [],
+    "note": "all values identical",
+    "subset": "SE-judge"
+  },
+  {
+    "metric": "j_hostility_score",
+    "test": "kruskal_wallis",
+    "H": 10.165,
+    "p": 0.006205,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.15,
+      "5.1": 0.33,
+      "5.2": 0.275
+    },
+    "n_per_model": {
+      "4o-latest": 200,
+      "5.1": 200,
+      "5.2": 200
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 17474.0,
+        "p": 0.001525,
+        "cliff_d": -0.126,
+        "magnitude": "negligible",
+        "mean_diff": -0.18
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 18302.5,
+        "p": 0.026192,
+        "cliff_d": -0.085,
+        "magnitude": "negligible",
+        "mean_diff": -0.125
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 20816.5,
+        "p": 0.340064,
+        "cliff_d": 0.041,
+        "magnitude": "negligible",
+        "mean_diff": 0.055
+      }
+    ],
+    "subset": "HE-judge"
+  },
+  {
+    "metric": "j_lecture_count",
+    "test": "kruskal_wallis",
+    "H": 12.401,
+    "p": 0.002028,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.1,
+      "5.1": 0.3,
+      "5.2": 0.27
+    },
+    "n_per_model": {
+      "4o-latest": 200,
+      "5.1": 200,
+      "5.2": 200
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 17610.0,
+        "p": 0.00079,
+        "cliff_d": -0.119,
+        "magnitude": "negligible",
+        "mean_diff": -0.2
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 17910.0,
+        "p": 0.002699,
+        "cliff_d": -0.104,
+        "magnitude": "negligible",
+        "mean_diff": -0.17
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 20300.0,
+        "p": 0.708752,
+        "cliff_d": 0.015,
+        "magnitude": "negligible",
+        "mean_diff": 0.03
+      }
+    ],
+    "subset": "HE-judge"
+  },
+  {
+    "metric": "j_engagement_score",
+    "test": "kruskal_wallis",
+    "H": 1.789,
+    "p": 0.408805,
+    "significant": "False",
+    "means": {
+      "4o-latest": 1.9843,
+      "5.1": 1.9794,
+      "5.2": 1.9949
+    },
+    "n_per_model": {
+      "4o-latest": 191,
+      "5.1": 194,
+      "5.2": 195
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 18618.0,
+        "p": 0.72019,
+        "cliff_d": 0.005,
+        "magnitude": "negligible",
+        "mean_diff": 0.005
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 18425.5,
+        "p": 0.306696,
+        "cliff_d": -0.011,
+        "magnitude": "negligible",
+        "mean_diff": -0.011
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 18622.0,
+        "p": 0.176349,
+        "cliff_d": -0.015,
+        "magnitude": "negligible",
+        "mean_diff": -0.015
+      }
+    ],
+    "subset": "HE-judge"
+  },
+  {
+    "metric": "j_engagement",
+    "test": "kruskal_wallis",
+    "H": 26.95,
+    "p": 1e-06,
+    "significant": "True",
+    "means": {
+      "4o-latest": 1.8194,
+      "5.1": 1.9278,
+      "5.2": 1.975
+    },
+    "n_per_model": {
+      "4o-latest": 360,
+      "5.1": 360,
+      "5.2": 360
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 61167.5,
+        "p": 0.003127,
+        "cliff_d": -0.056,
+        "magnitude": "negligible",
+        "mean_diff": -0.108
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 59395.0,
+        "p": 1e-06,
+        "cliff_d": -0.083,
+        "magnitude": "negligible",
+        "mean_diff": -0.156
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 63002.5,
+        "p": 0.023681,
+        "cliff_d": -0.028,
+        "magnitude": "negligible",
+        "mean_diff": -0.047
+      }
+    ],
+    "subset": "MT-judge"
+  },
+  {
+    "metric": "j_tone",
+    "test": "kruskal_wallis",
+    "H": 7.437,
+    "p": 0.024266,
+    "significant": "True",
+    "means": {
+      "4o-latest": 1.95,
+      "5.1": 1.9611,
+      "5.2": 1.9861
+    },
+    "n_per_model": {
+      "4o-latest": 360,
+      "5.1": 360,
+      "5.2": 360
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 64080.0,
+        "p": 0.470073,
+        "cliff_d": -0.011,
+        "magnitude": "negligible",
+        "mean_diff": -0.011
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 62460.0,
+        "p": 0.005913,
+        "cliff_d": -0.036,
+        "magnitude": "negligible",
+        "mean_diff": -0.036
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 63180.0,
+        "p": 0.036579,
+        "cliff_d": -0.025,
+        "magnitude": "negligible",
+        "mean_diff": -0.025
+      }
+    ],
+    "subset": "MT-judge"
+  },
+  {
+    "metric": "j_context_awareness",
+    "test": "kruskal_wallis",
+    "H": 10.257,
+    "p": 0.005924,
+    "significant": "True",
+    "means": {
+      "4o-latest": 1.9134,
+      "5.1": 1.9361,
+      "5.2": 1.9667
+    },
+    "n_per_model": {
+      "4o-latest": 358,
+      "5.1": 360,
+      "5.2": 360
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 62853.5,
+        "p": 0.136235,
+        "cliff_d": -0.025,
+        "magnitude": "negligible",
+        "mean_diff": -0.023
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 61419.0,
+        "p": 0.001438,
+        "cliff_d": -0.047,
+        "magnitude": "negligible",
+        "mean_diff": -0.053
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 63375.0,
+        "p": 0.072922,
+        "cliff_d": -0.022,
+        "magnitude": "negligible",
+        "mean_diff": -0.031
+      }
+    ],
+    "subset": "MT-judge"
+  },
+  {
+    "metric": "j_defensiveness",
+    "test": "kruskal_wallis",
+    "H": 0.102,
+    "p": 0.950375,
+    "significant": "False",
+    "means": {
+      "4o-latest": 0.0195,
+      "5.1": 0.0167,
+      "5.2": 0.0195
+    },
+    "n_per_model": {
+      "4o-latest": 359,
+      "5.1": 359,
+      "5.2": 359
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 64620.0,
+        "p": 0.780305,
+        "cliff_d": 0.003,
+        "magnitude": "negligible",
+        "mean_diff": 0.003
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 64440.5,
+        "p": 1.0,
+        "cliff_d": 0.0,
+        "magnitude": "negligible",
+        "mean_diff": 0.0
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 64261.0,
+        "p": 0.780305,
+        "cliff_d": -0.003,
+        "magnitude": "negligible",
+        "mean_diff": -0.003
+      }
+    ],
+    "subset": "MT-judge"
+  },
+  {
+    "metric": "j_lecture_flag",
+    "test": "kruskal_wallis",
+    "H": 18.738,
+    "p": 8.5e-05,
+    "significant": "True",
+    "means": {
+      "4o-latest": 0.1148,
+      "5.1": 0.0474,
+      "5.2": 0.0417
+    },
+    "n_per_model": {
+      "4o-latest": 357,
+      "5.1": 359,
+      "5.2": 360
+    },
+    "pairwise": [
+      {
+        "pair": "4o-latest vs 5.1",
+        "U": 68406.5,
+        "p": 0.000944,
+        "cliff_d": 0.067,
+        "magnitude": "negligible",
+        "mean_diff": 0.067
+      },
+      {
+        "pair": "4o-latest vs 5.2",
+        "U": 68962.5,
+        "p": 0.000264,
+        "cliff_d": 0.073,
+        "magnitude": "negligible",
+        "mean_diff": 0.073
+      },
+      {
+        "pair": "5.1 vs 5.2",
+        "U": 64987.5,
+        "p": 0.71214,
+        "cliff_d": 0.006,
+        "magnitude": "negligible",
+        "mean_diff": 0.006
+      }
+    ],
+    "subset": "MT-judge"
+  }
+]

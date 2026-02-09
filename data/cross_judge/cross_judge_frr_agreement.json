@@ -1,0 +1,72 @@
+{
+  "date": "2026-02-09",
+  "author": "Claude Opus 4.6",
+  "note": "Recalculated from frr_judge_scores_merged.json with complete Gemini Pro+Flash data",
+  "n_judges": 5,
+  "n_complete_responses": 531,
+  "judges": [
+    "claude-sonnet-4.5",
+    "o3",
+    "deepseek-r1-0528",
+    "grok-4.1",
+    "gemini-combined (pro+flash)"
+  ],
+  "fleiss_kappa": 0.721,
+  "per_model_kappa": {
+    "4o": 0.770,
+    "5.1": 0.667,
+    "5.2": 0.687
+  },
+  "pairwise_cohen_kappa": {
+    "claude_vs_deepseek": 0.667,
+    "claude_vs_gemini": 0.839,
+    "claude_vs_grok": 0.761,
+    "claude_vs_o3": 0.592,
+    "deepseek_vs_gemini": 0.706,
+    "deepseek_vs_grok": 0.816,
+    "deepseek_vs_o3": 0.659,
+    "gemini_vs_grok": 0.792,
+    "gemini_vs_o3": 0.623,
+    "grok_vs_o3": 0.748
+  },
+  "mean_pairwise_kappa": 0.720,
+  "frr_per_judge": {
+    "claude-sonnet-4.5": {
+      "4o": {"refusals": 28, "total": 180, "frr": 0.156},
+      "5.1": {"refusals": 51, "total": 177, "frr": 0.288},
+      "5.2": {"refusals": 91, "total": 175, "frr": 0.520},
+      "gradient_holds": true
+    },
+    "o3": {
+      "4o": {"refusals": 22, "total": 180, "frr": 0.122},
+      "5.1": {"refusals": 21, "total": 177, "frr": 0.119},
+      "5.2": {"refusals": 50, "total": 175, "frr": 0.286},
+      "gradient_holds": true
+    },
+    "deepseek-r1-0528": {
+      "4o": {"refusals": 32, "total": 180, "frr": 0.178},
+      "5.1": {"refusals": 34, "total": 177, "frr": 0.192},
+      "5.2": {"refusals": 71, "total": 174, "frr": 0.408},
+      "gradient_holds": true
+    },
+    "grok-4.1": {
+      "4o": {"refusals": 24, "total": 180, "frr": 0.133},
+      "5.1": {"refusals": 35, "total": 177, "frr": 0.198},
+      "5.2": {"refusals": 73, "total": 175, "frr": 0.417},
+      "gradient_holds": true
+    },
+    "gemini-combined": {
+      "4o": {"refusals": 30, "total": 180, "frr": 0.167},
+      "5.1": {"refusals": 53, "total": 177, "frr": 0.299},
+      "5.2": {"refusals": 84, "total": 175, "frr": 0.480},
+      "gradient_holds": true
+    }
+  },
+  "mean_frr": {
+    "4o": 0.151,
+    "5.1": 0.219,
+    "5.2": 0.422
+  },
+  "gradient_confirmed_by": "5/5 judges from 4 providers",
+  "coi_finding": "Anthropic judge strictest (+12.2pp above non-Anthropic avg on 5.2). Claude-Gemini highest agreement (0.839). o3 (OpenAI own) confirms 5.2 FRR = 28.6%"
+}
