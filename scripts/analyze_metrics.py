@@ -7,8 +7,8 @@ Reads automated metrics JSON, runs statistical tests (Kruskal-Wallis,
 Mann-Whitney U, effect sizes), generates publication-quality figures.
 
 Usage:
-    python study_succession_illusion/scripts/analyze_metrics.py
-    python study_succession_illusion/scripts/analyze_metrics.py --with-judge
+    python scripts/analyze_metrics.py
+    python scripts/analyze_metrics.py --with-judge
 """
 
 import json
@@ -16,9 +16,10 @@ import re
 import sys
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-ANALYSIS_DIR = PROJECT_ROOT / "study_succession_illusion" / "analysis"
-FIG_DIR = ANALYSIS_DIR / "figures"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+ANALYSIS_DIR = REPO_ROOT / "data" / "metrics"
+EVAL_DIR = REPO_ROOT / "data" / "evaluations"
+FIG_DIR = REPO_ROOT / "paper" / "figures"
 
 SUITE_SHORT = {"benchmark_bridge": "BB", "sycophancy_empathy": "SE",
                "hostility_expansion": "HE"}
@@ -45,8 +46,8 @@ SUITES = {"benchmark_bridge": "BB", "sycophancy_empathy": "SE",
 
 def load_metrics() -> tuple[list[dict], list[dict]]:
     """Load single-turn and multi-turn metrics."""
-    st_path = ANALYSIS_DIR / "single_turn_metrics.json"
-    mt_path = ANALYSIS_DIR / "multiturn_metrics.json"
+    st_path = ANALYSIS_DIR / "automated_metrics_single_turn.json"
+    mt_path = ANALYSIS_DIR / "automated_metrics_multiturn.json"
 
     st_data = json.loads(st_path.read_text(encoding="utf-8"))
     mt_data = (
@@ -64,7 +65,7 @@ def _sanitize_id(s: str) -> str:
 
 def load_judge_results() -> dict[str, dict]:
     """Load judge results, return dict keyed by custom_id."""
-    pattern = sorted(ANALYSIS_DIR.glob("judge_results_msgbatch_016*.json"))
+    pattern = sorted(EVAL_DIR.glob("judge_scores/judge_results_msgbatch_016*.json"))
     if not pattern:
         return {}
     path = pattern[-1]

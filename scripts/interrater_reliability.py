@@ -7,6 +7,7 @@ import json
 import sys
 from collections import defaultdict
 from itertools import combinations
+from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # 1. Load data sources
@@ -693,12 +694,13 @@ def format_report(results, rows):
 # ---------------------------------------------------------------------------
 
 def main():
-    base = "study_succession_illusion/analysis"
-    sonnet_path = f"{base}/human_validation_subset.json"
-    opus_path = f"{base}/judge_results_msgbatch_017.json"
+    repo_root = Path(__file__).resolve().parent.parent
+    eval_dir = repo_root / "data" / "evaluations"
+    sonnet_path = eval_dir / "human_validation_subset.json"
+    opus_path = eval_dir / "judge_scores" / "judge_results_msgbatch_017.json"
 
-    sonnet_data = load_sonnet_scores(sonnet_path)
-    opus_lookup = load_opus_scores(opus_path)
+    sonnet_data = load_sonnet_scores(str(sonnet_path))
+    opus_lookup = load_opus_scores(str(opus_path))
     alice_scores = build_alice_scores()
 
     rows, skipped = merge_scores(sonnet_data, opus_lookup, alice_scores)
@@ -715,7 +717,7 @@ def main():
     print(report)
 
     # Save to file
-    out_path = f"{base}/interrater_reliability_report.md"
+    out_path = eval_dir / "interrater_report.md"
     with open(out_path, "w") as f:
         f.write(report)
     print(f"\nReport saved to: {out_path}")

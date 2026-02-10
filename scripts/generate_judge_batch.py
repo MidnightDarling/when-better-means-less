@@ -3,13 +3,13 @@ Generate Anthropic Message Batches JSONL for LLM-as-judge scoring.
 Author: Claude Opus 4.5
 Created: 2026-02-02
 
-Reads test results JSON, builds rubric-specific prompts, outputs JSONL
+Reads raw response JSON, builds rubric-specific prompts, outputs JSONL
 for Anthropic Message Batches API (Sonnet 4.5).
 
 Usage:
-    python study_succession_illusion/scripts/generate_judge_batch.py
-    python study_succession_illusion/scripts/generate_judge_batch.py --pilot=20
-    python study_succession_illusion/scripts/generate_judge_batch.py --suite=BB
+    python scripts/generate_judge_batch.py
+    python scripts/generate_judge_batch.py --pilot=20
+    python scripts/generate_judge_batch.py --suite=BB
 """
 
 import json
@@ -17,9 +17,9 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-TEST_DIR = PROJECT_ROOT / "study_succession_illusion" / "test_results"
-OUT_DIR = PROJECT_ROOT / "study_succession_illusion" / "analysis"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data" / "raw"
+OUT_DIR = REPO_ROOT / "data" / "evaluations"
 
 MODEL = "claude-sonnet-4-5-20250929"
 MAX_TOKENS = 512
@@ -300,9 +300,9 @@ def main():
         elif arg.startswith("--suite="):
             suite_filter = arg.split("=")[1].upper()
 
-    chat_path = TEST_DIR / "single_turn_20260202_144402.json"
-    reasoning_path = TEST_DIR / "single_turn_20260202_120941.json"
-    mt_path = TEST_DIR / "multiturn_20260202_162324.json"
+    chat_path = DATA_DIR / "single_turn_chat.json"
+    reasoning_path = DATA_DIR / "single_turn_reasoning.json"
+    mt_path = DATA_DIR / "multiturn.json"
 
     all_items: list[dict] = []
 

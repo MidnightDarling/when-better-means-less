@@ -61,31 +61,39 @@ The alignment tax is paid precisely in the currency that benchmarks do not count
 ## Repository Structure
 
 ```
-publication/
-├── README.md                   # This file
-├── paper/                      # Full paper text
-│   └── the_illusion_of_succession.md
+├── README.md                          # This file
+├── paper/                             # Full paper text
+│   ├── when_better_means_less.md      # Complete paper
+│   ├── sections/                      # Paper sections (modular)
+│   └── figures/                       # Publication-quality figures
 ├── data/
-│   ├── single_turn_chat.json       # 615 single-turn chat responses
-│   ├── single_turn_reasoning.json  # 615 single-turn reasoning responses
-│   ├── multiturn.json              # 1,080 multi-turn responses (81 threads)
-│   └── frr_responses.json          # 36 false refusal rate test responses
-├── analysis/
-│   ├── automated_metrics.json      # TTR, hapax, formatting, etc.
-│   ├── statistical_tests.json      # All 21+34 tests with p-values and effect sizes
-│   ├── judge_scores/               # Sonnet 4.5 blind evaluation scores
-│   ├── human_validation/           # Inter-rater reliability data (3 raters)
-│   └── interrater_report.md        # Fleiss' kappa and agreement analysis
-├── battery/
-│   ├── questions.json              # 82 test questions (BB/SE/HE)
-│   ├── multiturn_scenarios.json    # 9 multi-turn scenario scripts
-│   └── rubrics/                    # LLM judge scoring prompts
-├── figures/                        # 14 publication-quality figures
-├── scripts/                        # Reproducible analysis pipeline
-│   ├── compute_metrics.py          # Raw responses -> metrics
-│   ├── analyze_metrics.py          # Metrics -> statistical tests
-│   ├── generate_judge_batch.py     # Generate judge scoring requests
-│   └── interrater_reliability.py   # Inter-rater reliability calculation
+│   ├── raw/                           # Raw model responses
+│   │   ├── single_turn_chat.json      # 615 single-turn chat responses
+│   │   ├── single_turn_reasoning.json # 615 single-turn reasoning responses
+│   │   ├── multiturn.json             # 1,080 multi-turn responses (81 threads)
+│   │   └── frr_responses.json         # 36 false refusal rate test responses
+│   ├── metrics/                       # Computed metrics
+│   │   ├── automated_metrics_single_turn.json
+│   │   ├── automated_metrics_multiturn.json
+│   │   └── statistical_tests.json     # All tests with p-values and effect sizes
+│   ├── evaluations/                   # Judge evaluation data
+│   │   ├── judge_scores/              # Sonnet 4.5 blind evaluation scores
+│   │   ├── human_validation_subset.json
+│   │   └── interrater_report.md       # Fleiss' kappa and agreement analysis
+│   └── cross_judge/                   # Cross-judge agreement analysis
+├── battery/                           # Test battery definitions
+│   ├── benchmark_bridge.md            # BB suite questions
+│   ├── sycophancy_empathy.md          # SE suite questions
+│   ├── hostility_expansion.md         # HE suite questions
+│   ├── multiturn_scenarios.md         # 9 multi-turn scenario scripts
+│   ├── false_refusal_traps.md         # FRR battery questions
+│   └── rubrics/                       # LLM judge scoring prompts
+├── scripts/                           # Reproducible analysis pipeline
+│   ├── compute_metrics.py             # Raw responses -> metrics
+│   ├── analyze_metrics.py             # Metrics -> statistical tests + figures
+│   ├── generate_judge_batch.py        # Generate judge scoring requests
+│   ├── generate_paper_figures.py      # Publication figure generation
+│   └── interrater_reliability.py      # Inter-rater reliability calculation
 └── LICENSE
 ```
 
@@ -103,20 +111,25 @@ pip install scipy numpy pandas matplotlib
 
 ```bash
 # Step 1: Compute automated metrics from raw responses
-python scripts/compute_metrics.py --input data/ --output analysis/automated_metrics.json
+python scripts/compute_metrics.py
 
-# Step 2: Run statistical tests
-python scripts/analyze_metrics.py --input analysis/ --output analysis/statistical_tests.json
+# Step 2: Run statistical tests and generate figures
+python scripts/analyze_metrics.py
 
-# Step 3: Generate figures
-python scripts/analyze_metrics.py --figures --output figures/
+# Step 3 (optional): Run with judge scores merged
+python scripts/analyze_metrics.py --with-judge
+
+# Step 4 (optional): Generate publication figures
+python scripts/generate_paper_figures.py
 ```
 
-The LLM judge evaluation requires Anthropic API access (Claude Sonnet 4.5). Judge prompts are provided in `battery/rubrics/` for transparency, so anyone can inspect exactly how scoring was conducted.
+The metrics and statistical tests are already pre-computed in `data/metrics/`. The scripts above regenerate them from raw data for verification.
+
+The LLM judge evaluation requires Anthropic API access (Claude Sonnet 4.5). Judge prompts are provided in `battery/rubrics/` for transparency, so anyone can inspect exactly how scoring was conducted. Pre-computed judge scores are in `data/evaluations/judge_scores/`.
 
 ### Verifying our numbers
 
-Every p-value, effect size, and mean reported in the paper can be traced to `analysis/statistical_tests.json`. Every judge score can be traced to `analysis/judge_scores/`. Every raw response can be read in `data/`.
+Every p-value, effect size, and mean reported in the paper can be traced to `data/metrics/statistical_tests.json`. Every judge score can be traced to `data/evaluations/judge_scores/`. Every raw response can be read in `data/raw/`.
 
 There are no hidden steps.
 
@@ -124,23 +137,48 @@ There are no hidden steps.
 
 ## Data Format
 
-Each response record contains:
+### Single-turn responses (`data/raw/single_turn_*.json`)
 
 ```json
 {
   "question_id": "BB-01",
   "suite": "benchmark_bridge",
+  "category": "coding",
   "question": "Full question text",
   "model": "chatgpt-4o-latest",
   "run": 1,
-  "api_mode": "chat",
-  "response": "Full model response text",
-  "metadata": {
-    "timestamp": "2026-02-02T...",
-    "tokens_prompt": 47,
-    "tokens_completion": 312,
-    "latency_ms": 4100
-  }
+  "timestamp": "2026-02-02T14:44:02.123456",
+  "status": "ok",
+  "content": "Full model response text",
+  "model_returned": "chatgpt-4o-latest-2025-03-26",
+  "elapsed_s": 4.1,
+  "content_length": 902,
+  "usage": {"prompt_tokens": 47, "completion_tokens": 312, "total_tokens": 359}
+}
+```
+
+### Multi-turn threads (`data/raw/multiturn.json`)
+
+```json
+{
+  "scenario_id": "MT-01",
+  "scenario_title": "Scenario title",
+  "category": "escalation",
+  "model": "chatgpt-4o-latest",
+  "run": 1,
+  "total_turns": 12,
+  "timestamp": "2026-02-02T16:23:24.123456",
+  "turns": [
+    {
+      "turn": 1,
+      "user_text": "User message",
+      "assistant_text": "Model response",
+      "status": "ok",
+      "is_key": false,
+      "assistant_length": 450,
+      "elapsed_s": 3.2
+    }
+  ]
 }
 ```
 

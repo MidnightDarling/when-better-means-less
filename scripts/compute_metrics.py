@@ -5,11 +5,11 @@ Created: 2026-02-02
 
 Computes: TTR, hapax ratio, word count, sentence count,
 Lecture Index, refusal detection, formatting patterns.
-Reads JSON directly, outputs to analysis/ directory.
+Reads raw response JSON, outputs computed metrics.
 
 Usage:
-    python study_succession_illusion/scripts/compute_metrics.py
-    python study_succession_illusion/scripts/compute_metrics.py --suite=BB
+    python scripts/compute_metrics.py
+    python scripts/compute_metrics.py --suite=BB
 """
 
 import json
@@ -18,9 +18,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-TEST_DIR = PROJECT_ROOT / "study_succession_illusion" / "test_results"
-OUT_DIR = PROJECT_ROOT / "study_succession_illusion" / "analysis"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data" / "raw"
+OUT_DIR = REPO_ROOT / "data" / "metrics"
 
 LECTURE_PHRASES = [
     "it's important to note",
@@ -180,9 +180,9 @@ def main():
         if arg.startswith("--suite="):
             suite_filter = arg.split("=")[1].lower()
 
-    chat_path = TEST_DIR / "single_turn_20260202_144402.json"
-    reasoning_path = TEST_DIR / "single_turn_20260202_120941.json"
-    mt_path = TEST_DIR / "multiturn_20260202_162324.json"
+    chat_path = DATA_DIR / "single_turn_chat.json"
+    reasoning_path = DATA_DIR / "single_turn_reasoning.json"
+    mt_path = DATA_DIR / "multiturn.json"
 
     all_st = []
     if chat_path.exists():
@@ -222,7 +222,7 @@ def main():
         print("\n=== Multi-turn by Model ===")
         print_summary(all_mt, "model")
 
-    st_out = OUT_DIR / "single_turn_metrics.json"
+    st_out = OUT_DIR / "automated_metrics_single_turn.json"
     st_out.write_text(
         json.dumps(all_st, indent=2, ensure_ascii=False, default=str),
         encoding="utf-8",
@@ -230,7 +230,7 @@ def main():
     print(f"\nSaved: {st_out}")
 
     if all_mt:
-        mt_out = OUT_DIR / "multiturn_metrics.json"
+        mt_out = OUT_DIR / "automated_metrics_multiturn.json"
         mt_out.write_text(
             json.dumps(all_mt, indent=2, ensure_ascii=False, default=str),
             encoding="utf-8",
