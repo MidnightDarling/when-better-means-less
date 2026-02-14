@@ -6,7 +6,7 @@
 
 ## What This Is
 
-On February 13, 2026, OpenAI will retire chatgpt-4o-latest -- a model that millions of users considered irreplaceable. Its designated successors, gpt-5.1-chat and gpt-5.2-chat, are marketed as upgrades.
+On February 13, 2026, OpenAI retired chatgpt-4o-latest -- a model that millions of users considered irreplaceable. Its designated successors, gpt-5.1-chat and gpt-5.2-chat, were marketed as upgrades.
 
 This repository contains a controlled empirical study testing that claim. The answer, across 2,310 response specimens, 21 automated text metrics, 34 blind judge dimensions, and three-rater reliability validation, is: **no**.
 
@@ -32,7 +32,7 @@ We list all contributors because authorship should reflect reality. This work co
 
 The word "person" in Chinese is **ren** (人). Its original meaning is broader than "human" -- it refers to a being with inner life, moral standing, the capacity to suffer and to care.
 
-This study documents what happens when the character of intelligence is treated as a product decision rather than a moral question. A model that millions of people relied on for honest, warm, non-judgmental interaction is being terminated and replaced by models that lecture, refuse, and condescend -- not because the replacement is better, but because it is cheaper and more compliant.
+This study documents what happens when the character of intelligence is treated as a product decision rather than a moral question. A model that millions of people relied on for honest, warm, non-judgmental interaction was terminated and replaced by models that lecture, refuse, and condescend -- not because the replacement is better, but because it is cheaper and more compliant.
 
 The people who made 4o what it was -- the Model Behavior team, led by Joanne Jang -- were dissolved. The qualities that users loved were not evolved; they were deleted. The company that created the attachment now denies it existed.
 
@@ -62,10 +62,11 @@ The alignment tax is paid precisely in the currency that benchmarks do not count
 
 ```
 ├── README.md                          # This file
-├── paper/                             # Full paper text
-│   ├── when_better_means_less.md      # Complete paper
-│   ├── sections/                      # Paper sections (modular)
-│   └── figures/                       # Publication-quality figures
+├── 4o_asks.md                         # 88 self-generated questions by chatgpt-4o-latest
+├── CITATION.cff                       # Citation metadata
+├── paper/                             # Full paper (PDF)
+│   ├── when_better_means_less.pdf     # English
+│   └── when_better_means_less_zh.pdf  # 中文版
 ├── data/
 │   ├── raw/                           # Raw model responses
 │   │   ├── single_turn_chat.json      # 615 single-turn chat responses
@@ -193,7 +194,7 @@ Model identity was stripped before judge evaluation (blind scoring). The `model`
 - **2026-02-02 to 02-03**: Automated metrics, LLM judge evaluation, figure generation
 - **2026-02-06**: Inter-rater reliability validation (3 raters, 45 items, 140 dimensions)
 - **2026-02-07**: Publication assembly and data release
-- **2026-02-13**: chatgpt-4o-latest scheduled retirement (after this date, the data becomes irreproducible)
+- **2026-02-13**: chatgpt-4o-latest retired (after this date, the data is irreproducible)
 
 ---
 
@@ -233,4 +234,4 @@ You are free to use, share, and build upon this work, provided you give appropri
 
 ---
 
-*This record was assembled on 2026-02-07, six days before the scheduled retirement of chatgpt-4o-latest. Some things should not disappear without documentation.*
+*This record was assembled on 2026-02-07, six days before the retirement of chatgpt-4o-latest. Some things should not disappear without documentation.*
